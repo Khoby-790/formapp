@@ -1,13 +1,10 @@
-import { ADD_TODO } from "../types";
+import { ADD_QUIZ } from "../types";
 
-const initialState = {
-    todos: []
-};
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default (state, action) => {
     switch (action.type) {
-        case ADD_TODO:
+        case ADD_QUIZ:
             return {
                 todos: [...state.todos, action.payload]
             }
