@@ -31,9 +31,9 @@ const Modal = ({ show, setShow, children, height, size, canClose }) => {
                     </Transition>
 
                     <Transition
-                        show={show}
+                        // show={show}
                         enter="transform transition ease-in-out duration-700 sm:duration-700"
-                        enterFrom="translate-x-5"
+                        enterFrom="translate-x-14"
                         enterTo="opacity-100 translate-x-0 sm:scale-100"
                         leave="transform transition ease-in-out duration-700 sm:duration-700"
                         leaveFrom="opacity-100 translate-x-0 sm:scale-100"
