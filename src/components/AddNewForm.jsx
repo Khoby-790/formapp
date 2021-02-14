@@ -1,4 +1,5 @@
 import React, { Fragment, useState } from 'react'
+import { useForm } from 'react-hook-form';
 import { FaPlus } from 'react-icons/fa'
 import FormInput from './FormInput';
 import Modal from './Modal';
@@ -31,7 +32,7 @@ const AddNewForm = () => {
 export default AddNewForm
 
 const Form = () => {
-
+    const { register, handleSubmit, errors } = useForm()
     return (
         <div className="">
             <div className="bg-green-800 py-4 px-4">
@@ -39,7 +40,7 @@ const Form = () => {
                 <p className="text-white font-thin">Provide valid details to create a form to be used by the outside world</p>
             </div>
             <div className="py-5 px-3">
-                <FormInput label="Team Name" name="team_name" />
+                <FormInput label="Form title" name="team_name" ref={register({ required: "Provide Form Title" })} />
             </div>
         </div>
     );
