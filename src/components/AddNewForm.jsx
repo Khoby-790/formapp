@@ -1,5 +1,6 @@
 import React, { Fragment, useState } from 'react'
 import { FaPlus } from 'react-icons/fa'
+import FormInput from './FormInput';
 import Modal from './Modal';
 
 
@@ -38,7 +39,7 @@ const Form = () => {
                 <p className="text-white font-thin">Provide valid details to create a form to be used by the outside world</p>
             </div>
             <div className="py-5">
-
+                <FormInput />
             </div>
         </div>
     );
