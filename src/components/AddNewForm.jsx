@@ -19,12 +19,9 @@ const AddNewForm = () => {
                     <h3 className="mt-2 text-gray-400">New Quiz</h3>
                 </div>
             </div>
-
-
             <Modal size={50} show={openModal} setShow={setOpenModal}>
                 <Form />
             </Modal>
-
         </Fragment>
     )
 }
@@ -33,9 +30,8 @@ export default AddNewForm
 
 const Form = () => {
     const { register, handleSubmit, errors } = useForm();
-
     const onAddForm = values => {
-        alert(JSON.stringify(values))
+        
     }
 
     return (
