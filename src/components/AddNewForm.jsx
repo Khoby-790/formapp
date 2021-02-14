@@ -33,8 +33,8 @@ const Form = () => {
 
     return (
         <div className="">
-            <div className="bg-green-800 py-4">
-                <h3>Add New Form</h3>
+            <div className="bg-green-800 py-4 px-4">
+                <h3 className="text-white font-bold text-lg">Add New Form</h3>
             </div>
         </div>
     );
