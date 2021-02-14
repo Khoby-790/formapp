@@ -26,12 +26,11 @@ const Modal = ({ show, setShow, children, height, size, canClose }) => {
                         leaveTo="opacity-0"
                     >
                         <div className="fixed  inset-0 transition-opacity">
-                            <div className="absolute inset-0 bg-black opacity-30" />
+                            <div className="absolute inset-0 bg-black opacity-20" />
                         </div>
                     </Transition>
 
                     <Transition
-                        // show={show}
                         enter="transform transition ease-in-out duration-700 sm:duration-700"
                         enterFrom="translate-x-36"
                         enterTo="opacity-100 translate-x-0 sm:scale-100"
