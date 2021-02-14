@@ -16,18 +16,10 @@ function App() {
       <div className="h-screen  bg-gray-300 ">
         <Navbar />
         <TabsAndSearchLayer />
-
         <div className=" px-9 bg-gray-300  flex-1 overflow-scroll grid  sm:grid sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-5">
-
           <AddNewForm />
-
           {/* Single Component */}
           {todos.map((quiz, key) => <FormItem key={key} />)}
-
-
-
-
-
         </div>
       </div>
 
