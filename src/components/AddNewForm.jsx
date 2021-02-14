@@ -37,8 +37,8 @@ const Form = () => {
                 <h3 className="text-white font-bold text-lg">Add New Form</h3>
                 <p className="text-white font-thin">Provide valid details to create a form to be used by the outside world</p>
             </div>
-            <div>
-                
+            <div className="py-5">
+
             </div>
         </div>
     );
