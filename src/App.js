@@ -22,14 +22,8 @@ function App() {
           <AddNewForm />
 
           {/* Single Component */}
+          {todos.map((quiz, key) => <FormItem key={key} />)}
 
-          <FormItem />
-          <FormItem />
-          <FormItem />
-          <FormItem />
-          <FormItem />
-          <FormItem />
-          <FormItem />
 
 
 
