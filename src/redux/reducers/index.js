@@ -2,7 +2,7 @@ import { combineReducers } from "redux";
 import quizesReducer from './quizApp';
 
 const reducers = combineReducers({
-    quizes: quizesReducer
+    quiz: quizesReducer
 })
 
 export default reducers;

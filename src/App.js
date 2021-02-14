@@ -5,11 +5,12 @@ import Navbar from './components/Navbar';
 import FormItem from './components/FormItem';
 import TabsAndSearchLayer from './components/TabsAndSearchLayer';
 import AddNewForm from './components/AddNewForm';
+import { useSelector } from 'react-redux';
 
 
 
 function App() {
-
+  const { todos } = useSelector(state => state.quiz)
   return (
     <Fragment>
       <div className="h-screen  bg-gray-300 ">
@@ -29,7 +30,7 @@ function App() {
           <FormItem />
           <FormItem />
           <FormItem />
- 
+
 
 
 
@@ -37,7 +38,7 @@ function App() {
       </div>
 
 
-      
+
 
     </Fragment>
   );
