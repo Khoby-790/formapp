@@ -45,7 +45,8 @@ const Form = () => {
                 <p className="text-white font-thin">Provide valid details to create a form to be used by the outside world</p>
             </div>
             <div className="py-5 px-3">
-                <div className="grid">
+                <div className="grid grid-cols-2 gap-x-4">
+                    <FormInput label="Form title" name="team_name" ref={register({ required: "Provide Form Title" })} />
                     <FormInput label="Form title" name="team_name" ref={register({ required: "Provide Form Title" })} />
                 </div>
             </div>
