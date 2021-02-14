@@ -18,7 +18,7 @@ const Modal = ({ show, setShow, children, height, size, canClose }) => {
             <Transition show={show}>
                 <div class="fixed z-20 bottom-0 inset-x-0 px-4 pb-6 sm:inset-0 sm:p-0 sm:flex sm:items-center sm:justify-center">
                     <Transition
-                        enter="ease-out duration-700"
+                        enter="ease-out duration-500"
                         enterFrom="opacity-0"
                         enterTo="opacity-100"
                         leave="ease-out duration-300"
@@ -33,7 +33,7 @@ const Modal = ({ show, setShow, children, height, size, canClose }) => {
                     <Transition
                         show={show}
                         enter="transform transition ease-in-out duration-700 sm:duration-700"
-                        enterFrom="translate-x-full"
+                        enterFrom="translate-x-5"
                         enterTo="opacity-100 translate-x-0 sm:scale-100"
                         leave="transform transition ease-in-out duration-700 sm:duration-700"
                         leaveFrom="opacity-100 translate-x-0 sm:scale-100"
