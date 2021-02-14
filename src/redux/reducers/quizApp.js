@@ -1,8 +1,11 @@
 import { ADD_QUIZ } from "../types";
 
+const initialState = {
+    todos: []
+}
 
 // eslint-disable-next-line import/no-anonymous-default-export
-export default (state, action) => {
+export default (state = initialState, action) => {
     switch (action.type) {
         case ADD_QUIZ:
             return {
