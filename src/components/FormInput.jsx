@@ -1,6 +1,6 @@
 import React, { forwardRef } from 'react'
 
-const FormInput = forwardRef(({ name, type = "text", label, ...rest }, ref) => {
+const FormInput = forwardRef(({ name, type = "text", label, showError, errors = {}, ...rest }, ref) => {
     return (
         <div className="flex flex-1 flex-col">
             <label htmlFor={name}>{label}</label>
