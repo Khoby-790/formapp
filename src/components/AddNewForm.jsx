@@ -20,7 +20,7 @@ const AddNewForm = () => {
 
 
             <Modal size={50} show={openModal} setShow={setOpenModal}>
-                Hello
+                
             </Modal>
 
         </Fragment>
@@ -28,3 +28,12 @@ const AddNewForm = () => {
 }
 
 export default AddNewForm
+
+const Form = () => {
+
+    return (
+        <div className="">
+            <div className="bg-green-800"></div>
+        </div>
+    );
+}
