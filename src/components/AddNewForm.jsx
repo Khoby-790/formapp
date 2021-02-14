@@ -46,8 +46,8 @@ const Form = () => {
             </div>
             <div className="py-5 px-3">
                 <div className="grid grid-cols-2 gap-x-4">
-                    <FormInput label="Form title" name="team_name" ref={register({ required: "Provide Form Title" })} />
-                    <FormInput label="Form Deadline" name="deadline" ref={register({ required: "Provide Form Title" })} />
+                    <FormInput errors={errors} label="Form title" name="team_name" ref={register({ required: "Provide Form Title" })} />
+                    <FormInput errors={errors} label="Form Deadline" name="deadline" ref={register({ required: "Provide Form Title" })} />
                 </div>
                 <div>
                     <button className="bg-green-400 text-white px-3 py-2 mt-3">Submit</button>
