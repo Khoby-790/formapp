@@ -20,7 +20,7 @@ const AddNewForm = () => {
 
 
             <Modal size={50} show={openModal} setShow={setOpenModal}>
-                
+                <Form />
             </Modal>
 
         </Fragment>
@@ -33,7 +33,9 @@ const Form = () => {
 
     return (
         <div className="">
-            <div className="bg-green-800"></div>
+            <div className="bg-green-800 py-4">
+                <h3>Add New Form</h3>
+            </div>
         </div>
     );
 }
