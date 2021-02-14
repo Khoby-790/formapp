@@ -49,6 +49,9 @@ const Form = () => {
                     <FormInput label="Form title" name="team_name" ref={register({ required: "Provide Form Title" })} />
                     <FormInput label="Form title" name="team_name" ref={register({ required: "Provide Form Title" })} />
                 </div>
+                <div>
+                    <button className="bg-green-400 text-white px-3 py-2 mt-3">Submit</button>
+                </div>
             </div>
         </form>
     );
