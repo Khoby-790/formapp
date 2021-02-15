@@ -20,7 +20,7 @@ const FormItem = ({ form }: FormItemType) => {
                     </div>
                     <div className="border-t text-md text-gray-400 py-2 px-2 border-gray-400">
                         0 responses
-              </div>
+                    </div>
                 </div>
             </div>
         </Fragment>
