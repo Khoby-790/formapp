@@ -43,7 +43,7 @@ type FormProps = {
 const Form = ({ addForm }: FormProps) => {
     const { register, handleSubmit, errors } = useForm();
     const onAddForm = (values: FieldValues) => {
-        alert(JSON.stringify(values));
+        // alert(JSON.stringify(values));
         addForm({
             title: values?.title,
             deadline: values?.deadline,
