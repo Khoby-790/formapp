@@ -3,6 +3,7 @@ import { FieldValues, useForm } from 'react-hook-form';
 import { useDispatch } from 'react-redux';
 import { Dispatch } from 'redux';
 import FormInput from './FormInput';
+import Input from './Input';
 
 
 type FormProps = {
@@ -31,8 +32,8 @@ const FormsNewForm = ({ addForm, setShow }: FormProps) => {
             </div>
             <div className="py-5 px-3">
                 <div className="grid grid-cols-2 gap-x-4">
-                    <FormInput errors={errors} label="Form title" name="title" ref={register({ required: "Provide Form title" })} />
-                    <FormInput errors={errors} type="date" label="Form Deadline" name="deadline" ref={register({ required: "Provide Form deadline" })} />
+                    <Input errors={errors} label="Form title" name="title" ref={register({ required: "Provide Form title" })} />
+                    <Input errors={errors} type="date" label="Form Deadline" name="deadline" ref={register({ required: "Provide Form deadline" })} />
                 </div>
                 <div>
                     <button className="bg-green-400 text-white px-3 py-2 mt-3">Submit</button>
