@@ -2,15 +2,16 @@ import React, { forwardRef } from 'react';
 import { FieldErrors } from 'react-hook-form';
 
 
-interface InputProps extends React.HTMLProps<HTMLInputElement> {
+type InputType = React.HTMLProps<HTMLInputElement | HTMLLabelElement | HTMLTextAreaElement | HTMLSelectElement>
+
+interface Props {
     // type?: String;
-    // name?: String;
-    // label?: String;
-    // errors?: FieldErrors
-    // rest?: React.HTMLProps<HTMLInputElement>
+    name?: String;
+    label?: String;
+    errors?: FieldErrors
 }
 
-const Input = forwardRef<HTMLInputElement, InputProps>(({ errors, name, type, ...rest }, ref) => {
+const Input = forwardRef<InputType, Props & InputType>(({ errors, name, type, ...rest }, ref) => {
     const hasError = errors && errors[name];
     return (
         <div className="flex flex-1 flex-col">
