@@ -20,8 +20,8 @@ interface IForm {
   title: String;
   deadline: Date;
   published: Boolean;
-  questions: IQuestion[];
-  response: IResponse[];
+  questions?: IQuestion[];
+  response?: IResponse[];
 }
 
 type QuizesState = {
