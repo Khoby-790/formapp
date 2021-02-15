@@ -13,6 +13,7 @@ interface IQuestion {
 interface IResponse {
   questionText: String;
   answer: String;
+  correct?: Boolean;
 }
 
 interface IForm {
