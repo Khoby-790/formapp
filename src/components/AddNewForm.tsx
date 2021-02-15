@@ -1,12 +1,20 @@
-import React, { Fragment, useState } from 'react'
+import React, { Fragment, useCallback, useState } from 'react'
 import { useForm } from 'react-hook-form';
 import { FaPlus } from 'react-icons/fa'
+import { useDispatch } from 'react-redux';
+import { Dispatch } from 'redux';
 import FormInput from './FormInput';
 import Modal from './Modal';
-
+import { addForm } from '../redux/actions/FormActions';
 
 const AddNewForm = () => {
+    const dispatch: Dispatch<any> = useDispatch()
     const [openModal, setOpenModal] = useState(false);
+
+    const _addForm = useCallback((form: IForm) => {
+        addForm(form);
+    }, [dispatch])
+
     return (
         <Fragment>
             <div className="h-64 px-3 cursor-pointer mx-3 bg-white rounded-sm shadow-lg flex flex-col justify-center items-center">
@@ -31,7 +39,7 @@ export default AddNewForm
 const Form = () => {
     const { register, handleSubmit, errors } = useForm();
     const onAddForm = values => {
-        
+
     }
 
     return (
