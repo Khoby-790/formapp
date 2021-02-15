@@ -3,7 +3,6 @@ import { FieldErrors } from 'react-hook-form';
 
 
 type InputType = React.ClassAttributes<HTMLInputElement | HTMLLabelElement | HTMLTextAreaElement | HTMLSelectElement>
-type InputProps = React.HTMLProps<HTMLInputElement | HTMLLabelElement | HTMLTextAreaElement | HTMLSelectElement>
 interface Props {
     type?: string;
     name?: string;
