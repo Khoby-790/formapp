@@ -10,11 +10,17 @@ interface IQuestion {
   answer?: String;
 }
 
+interface IResponse {
+  questionText: String;
+  answer: String;
+}
+
 interface IForm {
   title: String;
   deadline: Date;
   published: Boolean;
   questions: IQuestion[];
+  response: IResponse[];
 }
 
 type QuizesState = {
