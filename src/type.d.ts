@@ -1,8 +1,13 @@
-interface Quiz {
+interface IQuiz {
   title: String;
   deadline: Date;
 }
 
 type QuizesState = {
-  quizes: [Quiz];
+  quizes: [IQuiz];
+};
+
+type QuizAction = {
+  type: String;
+  quiz: IQuiz;
 };
