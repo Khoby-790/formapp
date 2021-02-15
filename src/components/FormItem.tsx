@@ -1,5 +1,6 @@
 import React, { Fragment, useRef, useState } from 'react'
 import { BsThreeDots } from 'react-icons/bs';
+import { useOutsideClick } from '../hooks';
 import Transition from './Transition';
 
 type FormItemType = {
@@ -9,6 +10,11 @@ type FormItemType = {
 const FormItem = ({ form }: FormItemType) => {
     const [showmenu, setShowmenu] = useState(false);
     const menuRef = useRef<HTMLDivElement>(null);
+
+    useOutsideClick(menuRef, () => {
+        if (showmenu) setShowmenu(false)
+    })
+
     return (
         <Fragment>
             <div className="h-64 relative mx-3 mb-2 bg-white">
