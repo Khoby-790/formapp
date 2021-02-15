@@ -46,5 +46,8 @@ type Argument = QuizAction | FormAction;
 
 type DispatchType = (args: Argument) => Argument;
 
-type AppState = QuizesState | FormState;
+interface AppState {
+  quiz: QuizesState;
+  form: FormState;
+}
 type AppAction = QuizAction | FormAction;
