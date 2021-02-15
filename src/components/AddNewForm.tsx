@@ -1,5 +1,5 @@
 import React, { Fragment, useCallback, useState } from 'react'
-import { useForm } from 'react-hook-form';
+import { useForm, FieldValues } from 'react-hook-form';
 import { FaPlus } from 'react-icons/fa'
 import { useDispatch } from 'react-redux';
 import { Dispatch } from 'redux';
@@ -33,7 +33,7 @@ const AddNewForm = () => {
                 </div>
             </div>
             <Modal size={50} show={openModal} setShow={setOpenModal}>
-                <Form />
+                <Form addForm={_addForm} />
             </Modal>
         </Fragment>
     )
@@ -41,10 +41,14 @@ const AddNewForm = () => {
 
 export default AddNewForm
 
-const Form = () => {
-    const { register, handleSubmit, errors } = useForm();
-    const onAddForm = values => {
+type FormProps = {
+    addForm: (form: IForm) => void
+}
 
+const Form = ({ addForm }: FormProps) => {
+    const { register, handleSubmit, errors } = useForm();
+    const onAddForm = (values: FieldValues) => {
+        alert(JSON.stringify(values));
     }
 
     return (
