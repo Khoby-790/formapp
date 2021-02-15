@@ -3,6 +3,12 @@ interface IQuiz {
   deadline: Date;
 }
 
+interface IForm {
+  title: String;
+  deadline: Date;
+  questions: IQuestion[];
+}
+
 type QuizesState = {
   quizes: IQuiz[];
 };
@@ -12,7 +18,10 @@ type QuizAction = {
   quiz: IQuiz;
 };
 
-type FormAction = {};
+type FormAction = {
+  type: String;
+  form: IForm;
+};
 
 type Argument = QuizAction | FormAction;
 

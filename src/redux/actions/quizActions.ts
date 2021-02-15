@@ -12,6 +12,8 @@ export function addQuiz(quiz: IQuiz) {
   };
 }
 
+
+
 export function simulateHttpRequest(action: QuizAction) {
   return (dispatch: DispatchType) => {
     setTimeout(() => {
