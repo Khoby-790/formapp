@@ -73,7 +73,7 @@ const CSSTransition = ({
     );
 };
 
-const Transition = ({ show, appear, ...rest }) => {
+const Transition = ({ show, appear = show, ...rest }) => {
     const { parent } = useContext(TransitionContext);
     const isInitialRender = useIsInitialRender();
     const isChild = show === undefined;
