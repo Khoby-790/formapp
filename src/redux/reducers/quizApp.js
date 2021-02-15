@@ -1,7 +1,7 @@
 import { ADD_QUIZ } from "../types";
 
 const initialState = {
-    todos: []
+    todos: [1]
 }
 
 // eslint-disable-next-line import/no-anonymous-default-export
