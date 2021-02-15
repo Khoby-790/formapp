@@ -19,7 +19,7 @@ function App() {
         <div className="px-9 bg-gray-300  flex-1 overflow-scroll grid  sm:grid sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-5">
           <AddNewForm />
           {/* Single Component */}
-          {quizes.map((quiz: any, key: number) => <FormItem key={key} />)}
+          {quizes.map((quiz: IQuiz, key: number) => <FormItem key={key} />)}
         </div>
       </div>
 
