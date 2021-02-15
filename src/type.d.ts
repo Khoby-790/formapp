@@ -4,7 +4,7 @@ interface IQuiz {
 }
 
 type QuizesState = {
-  quizes: [IQuiz?];
+  quizes: IQuiz[];
 };
 
 type QuizAction = {
