@@ -12,7 +12,7 @@ const FormItem = ({ form }: FormItemType) => {
         <Fragment>
             <div className="h-64 relative mx-3 mb-2 bg-white">
                 <div className="absolute rounded-bl-lg  bg-gray-600 cursor-pointer w-11 flex justify-center items-center h-8 right-0">
-                    <BsThreeDots color="#fff" size={30} />
+                    <BsThreeDots onClick={() => setShowmenu(true)} color="#fff" size={30} />
                     <div className="relative">
                         <Transition show={showmenu}>
                             <div className="origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
