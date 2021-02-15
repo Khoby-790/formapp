@@ -3,9 +3,14 @@ interface IQuiz {
   deadline: Date;
 }
 
+interface IQuestion {
+
+};
+
 interface IForm {
   title: String;
   deadline: Date;
+  published: Boolean;
   questions: IQuestion[];
 }
 
