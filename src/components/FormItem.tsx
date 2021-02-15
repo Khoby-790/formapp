@@ -18,7 +18,12 @@ const FormItem = ({ form }: FormItemType) => {
                         <h2 className="text-md " >{form.title}</h2>
                     </div>
                     <div className="border-t text-md text-gray-400 py-2 px-2 border-gray-400">
-                        {form?.response?.length || 0} responses
+                        {form.published && <Fragment>
+                            {form?.response?.length || 0} responses
+                        </Fragment>}
+                        {!form.published && <Fragment>
+                            Form has not been published yet
+                        </Fragment>}
                     </div>
                 </div>
             </div>
