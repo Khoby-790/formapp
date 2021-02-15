@@ -26,7 +26,7 @@ const AddNewForm = () => {
                 </div>
             </div>
             <Modal size={50} show={openModal} setShow={setOpenModal}>
-                <Form addForm={addForm} />
+                <Form addForm={addForm} setShow={setOpenModal} />
             </Modal>
         </Fragment>
     )
@@ -36,9 +36,10 @@ export default AddNewForm
 
 type FormProps = {
     addForm: (form: IForm) => void
+    setShow: (state: boolean) => void
 }
 
-const Form = ({ addForm }: FormProps) => {
+const Form = ({ addForm, setShow }: FormProps) => {
     const dispatch: Dispatch<any> = useDispatch()
     const { register, handleSubmit, errors } = useForm();
     const onAddForm = (values: FieldValues) => {
@@ -47,6 +48,7 @@ const Form = ({ addForm }: FormProps) => {
             deadline: values?.deadline,
             published: false
         }))
+        setShow(false);
     }
 
     return (
