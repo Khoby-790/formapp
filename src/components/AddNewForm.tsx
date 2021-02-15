@@ -8,12 +8,10 @@ import Modal from './Modal';
 import { addForm } from '../redux/actions/FormActions';
 
 const AddNewForm = () => {
-    const dispatch: Dispatch<any> = useDispatch()
+
     const [openModal, setOpenModal] = useState(false);
 
-    const _addForm = useCallback((form: IForm) => {
-        dispatch(addForm(form));
-    }, [dispatch])
+
 
     return (
         <Fragment>
@@ -28,7 +26,7 @@ const AddNewForm = () => {
                 </div>
             </div>
             <Modal size={50} show={openModal} setShow={setOpenModal}>
-                <Form addForm={_addForm} />
+                <Form addForm={addForm} />
             </Modal>
         </Fragment>
     )
@@ -41,13 +39,14 @@ type FormProps = {
 }
 
 const Form = ({ addForm }: FormProps) => {
+    const dispatch: Dispatch<any> = useDispatch()
     const { register, handleSubmit, errors } = useForm();
     const onAddForm = (values: FieldValues) => {
-        addForm({
+        dispatch(addForm({
             title: values?.title,
             deadline: values?.deadline,
             published: false
-        })
+        }))
     }
 
     return (
