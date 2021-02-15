@@ -3,9 +3,12 @@ interface IQuiz {
   deadline: Date;
 }
 
+type AnswerType = "mcq" | "written";
 interface IQuestion {
-
-};
+  questionText: String;
+  answerType: AnswerType;
+  answer?: String;
+}
 
 interface IForm {
   title: String;
