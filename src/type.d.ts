@@ -11,3 +11,5 @@ type QuizAction = {
   type: String;
   quiz: IQuiz;
 };
+
+type DispatchType = (args: QuizAction) => QuizAction;
