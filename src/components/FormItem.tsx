@@ -1,6 +1,5 @@
 import React, { Fragment } from 'react'
 import { BsThreeDots } from 'react-icons/bs';
-import { Interface } from 'readline';
 
 type FormItemType = {
     form: IForm
@@ -10,7 +9,7 @@ const FormItem = ({ form }: FormItemType) => {
     return (
         <Fragment>
             <div className="h-64 relative mx-3 mb-2 bg-white">
-                {JSON.stringify(form)}
+                {/* {JSON.stringify(form)} */}
                 <div className="absolute rounded-bl-lg  bg-gray-600 cursor-pointer w-11 flex justify-center items-center h-8 right-0">
                     <BsThreeDots color="#fff" size={30} />
                 </div>

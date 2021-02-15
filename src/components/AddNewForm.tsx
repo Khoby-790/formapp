@@ -59,7 +59,7 @@ const Form = ({ addForm, setShow }: FormProps) => {
             </div>
             <div className="py-5 px-3">
                 <div className="grid grid-cols-2 gap-x-4">
-                    <FormInput errors={errors} label="Form title" name="team_name" ref={register({ required: "Provide Form title" })} />
+                    <FormInput errors={errors} label="Form title" name="title" ref={register({ required: "Provide Form title" })} />
                     <FormInput errors={errors} type="date" label="Form Deadline" name="deadline" ref={register({ required: "Provide Form deadline" })} />
                 </div>
                 <div>
