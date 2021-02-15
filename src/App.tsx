@@ -10,7 +10,7 @@ import { useSelector } from 'react-redux';
 
 
 function App() {
-  const { todos } = useSelector(state => state.quiz)
+  const quizes: readonly IQuiz[] = useSelector((state: QuizesState) => state.quizes)
   return (
     <Fragment>
       <div className="h-screen  bg-gray-300 ">
@@ -19,7 +19,7 @@ function App() {
         <div className="px-9 bg-gray-300  flex-1 overflow-scroll grid  sm:grid sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-5">
           <AddNewForm />
           {/* Single Component */}
-          {todos.map((quiz: any, key: number) => <FormItem key={key} />)}
+          {quizes.map((quiz: any, key: number) => <FormItem key={key} />)}
         </div>
       </div>
 
