@@ -12,7 +12,7 @@ const AddNewForm = () => {
     const [openModal, setOpenModal] = useState(false);
 
     const _addForm = useCallback((form: IForm) => {
-        addForm(form);
+        dispatch(addForm(form));
     }, [dispatch])
 
     return (
@@ -43,7 +43,6 @@ type FormProps = {
 const Form = ({ addForm }: FormProps) => {
     const { register, handleSubmit, errors } = useForm();
     const onAddForm = (values: FieldValues) => {
-        // alert(JSON.stringify(values));
         addForm({
             title: values?.title,
             deadline: values?.deadline,
