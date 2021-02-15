@@ -5,4 +5,14 @@ export function addQuiz(quiz: IQuiz) {
     type: ADD_QUIZ,
     quiz,
   };
+
+  return simulateHttpRequest(action);
+}
+
+export function simulateHttpRequest(action: QuizAction) {
+  return (dispatch: DispatchType) => {
+    setTimeout(() => {
+      dispatch(action);
+    }, 500);
+  };
 }
