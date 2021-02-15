@@ -10,6 +10,7 @@ import { addForm } from '../redux/actions/FormActions';
 const AddNewForm = () => {
 
     const [openModal, setOpenModal] = useState(false);
+    const [openAddQuiz, setOpenAddQuiz] = useState(false);
 
 
 
