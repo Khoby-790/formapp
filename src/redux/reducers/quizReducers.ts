@@ -9,10 +9,13 @@ const reducer = (state: QuizesState = initialState, action: QuizAction) => {
     case ADD_QUIZ:
       return {
         ...state,
-        quizes: action.quiz,
+        quizes: [...state.quizes, action.quiz],
       };
 
     default:
       return state;
   }
 };
+
+
+export default reducer;
