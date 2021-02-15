@@ -11,12 +11,7 @@ const AddNewForm = () => {
     const dispatch: Dispatch<any> = useDispatch()
     const [openModal, setOpenModal] = useState(false);
 
-    const _addForm = useCallback((values: any) => {
-        const form: IForm = {
-            title: values?.title,
-            deadline: values?.deadline,
-            published: false
-        }
+    const _addForm = useCallback((form: IForm) => {
         addForm(form);
     }, [dispatch])
 
@@ -49,6 +44,11 @@ const Form = ({ addForm }: FormProps) => {
     const { register, handleSubmit, errors } = useForm();
     const onAddForm = (values: FieldValues) => {
         alert(JSON.stringify(values));
+        addForm({
+            title: values?.title,
+            deadline: values?.deadline,
+            published: false
+        })
     }
 
     return (
