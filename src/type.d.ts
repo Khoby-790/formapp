@@ -12,4 +12,8 @@ type QuizAction = {
   quiz: IQuiz;
 };
 
-type DispatchType = (args: QuizAction) => QuizAction;
+type FormAction = {};
+
+type Argument = QuizAction | FormAction;
+
+type DispatchType = (args: Argument) => Argument;
