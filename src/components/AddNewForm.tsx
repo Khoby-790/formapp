@@ -11,7 +11,12 @@ const AddNewForm = () => {
     const dispatch: Dispatch<any> = useDispatch()
     const [openModal, setOpenModal] = useState(false);
 
-    const _addForm = useCallback((form: IForm) => {
+    const _addForm = useCallback((values: any) => {
+        const form: IForm = {
+            title: values?.title,
+            deadline: values?.deadline,
+            published: false
+        }
         addForm(form);
     }, [dispatch])
 
