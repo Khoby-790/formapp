@@ -6,7 +6,10 @@ export function addQuiz(quiz: IQuiz) {
     quiz,
   };
 
-  return simulateHttpRequest(action);
+  //   return simulateHttpRequest(action);
+  return (dispatch: DispatchType) => {
+    dispatch(action);
+  };
 }
 
 export function simulateHttpRequest(action: QuizAction) {
