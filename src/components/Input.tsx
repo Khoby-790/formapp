@@ -12,7 +12,7 @@ interface Props {
 }
 
 const Input = forwardRef<InputType, Props & InputType>(({ errors, name, type, ...rest }, ref) => {
-    const hasError = errors && errors[name];
+    const hasError = name && errors && errors[name];
     return (
         <div className="flex flex-1 flex-col">
             <label className={`${hasError ? "text-red-600" : ""}`} htmlFor={name}>{label}</label>
