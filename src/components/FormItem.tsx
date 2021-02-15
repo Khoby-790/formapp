@@ -3,7 +3,7 @@ import { BsThreeDots } from 'react-icons/bs';
 import { Interface } from 'readline';
 
 type FormItemType = {
-    form: IQuiz
+    form: IForm
 }
 
 const FormItem = ({ form }: FormItemType) => {
