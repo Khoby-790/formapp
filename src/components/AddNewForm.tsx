@@ -29,6 +29,11 @@ const AddNewForm = () => {
             <Modal size={50} show={openModal} setShow={setOpenModal}>
                 <Form addForm={addForm} setShow={setOpenModal} />
             </Modal>
+
+            <Modal size={40} show={openAddQuiz} setShow={setOpenAddQuiz}>
+
+            </Modal>
+
         </Fragment>
     )
 }
