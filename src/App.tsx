@@ -10,7 +10,7 @@ import { useSelector } from 'react-redux';
 
 
 function App() {
-  const quizes: readonly IQuiz[] = useSelector((state: QuizesState) => state.quizes)
+  const quizes: readonly IQuiz[] = useSelector((state: AppState) => state.quiz.quizes)
   return (
     <Fragment>
       <div className="h-screen  bg-gray-300 ">
